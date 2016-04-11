@@ -107,21 +107,29 @@ place:
   location_item_name: location
 
   items:
-    - prompt: _(You are providing input on:)
+    - prompt: _(Specify Type of Crime:)
       type: select
       options:
         - label: _(Choose)
           value: ''
-        - label: _(Crime Hotspots)
-          value: crime
+        - label: _((Property Crime(Burglary))
+          value: burg
+        - label: _((Property Crime(Theft))
+          value: thft
+        - label: _((Property Crime(Extortion))
+          value: extr
+        - label: _((Personal Crime(Assault))
+          value: aslt
+        - label: _((Personal Crime(Kidnap))
+          value: kidp
+        - label: _((Personal Crime(Rape))
+          value: rpe
+        - label: _((Personal Crime(Murder))
+          value: mdr
       name: location_type
       attrs:
         - key: required
       
-
-    
-     
-
     - prompt: _(Questionnaire no:)
       type: text
       name: qno
@@ -131,6 +139,7 @@ place:
           value: _(Enter serial no on Questionnaire)
         - key: size
           value: 30
+    
     - prompt: _(Image)
       inputfile_label: _(Share an Image of the Location)
       type: file

@@ -5,7 +5,7 @@ app:
   # Header name
   name: PlanShare
   # Meta description that will show up in Google search results
-  meta_description: _(PlanShare Crime Map is a web app designed to gather public input on crime hotspots)
+  meta_description: _(PlanShare Crime Map is a web app designed to gather public input on crime hotspots  in your area)
   # Meta author that will show up in Google search results
   meta_author: Osewa Oluwadamilare Joshua
 
@@ -280,12 +280,12 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Share a Plan)
+  add_button_label: _(Add a Crime Hotspot)
   # Labels for the buttons that toggle the map and list views
-  show_list_button_label: _(List All Issues)
+  show_list_button_label: _(List All Crime Hotpots)
   show_map_button_label: _(Show the Map)
   action_text: _(added)
-  title: _(          We are undertaking a comprehensive planning process to ensure public safety in your community.Choose a location and identify the public safety issue                          )
+  title: _(          Drag the pin to specify crime hotspot and specify type of crime using the form below                          )
   action_text: _(identified)
   anonymous_name: _(Someone)
   submit_button_label: _(Share)
@@ -382,14 +382,14 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-    
-  - title: PlanShare Crime Map
-    slug: about
-    start_page: true
 
   - title: _(Home)
     external: true
     url: http://planshare.ml
+    
+  - title: PlanShare Crime Map
+    slug: about
+    start_page: true
     
   - title: _(blog)
     external: true

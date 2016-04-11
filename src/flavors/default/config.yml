@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: PlanShare Crime Map
+  title: PlanShareMap Demo
   # Header name
   name: PlanShare
   # Meta description that will show up in Google search results
-  meta_description: _(PlanShare Crime Map is a web app designed to gather public input on crime hotspots)
+  meta_description: _(PlanShareMap is a web app designed to gather constructive public input in a social and engaging framework that allows all stakeholders to communicate their plan ideas effectively.)
   # Meta author that will show up in Google search results
   meta_author: Osewa Oluwadamilare Joshua
 
@@ -29,13 +29,13 @@ map:
 
   options:
     center:
-      lat: 7.411000
-      lng: 3.898000
+      lat: 6.451000
+      lng: 3.351257
     zoom: 14
     minZoom: 10
     maxZoom: 17
   layers:
-    - url: http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+    - url: https://api.tiles.mapbox.com/v4/dreking6.kj150hj6/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHJla2luZzYiLCJhIjoiV0JVSmg3TSJ9.qhBElPBHygMS70U0B-Dd4Q
       attribution: '&copy; PlanShareMap Powered by OpenStreetMap'
     - url: /static/data/philadelphia.geojson
       type: json
@@ -51,10 +51,10 @@ map:
 # The values map the place type to map icons (defined below).
 place_types:
  
-  crime:
-    label: _(Crime Hotspots)
+  tissue:
+    label: _(Traffic and Transportation Issue)
     rules:
-      - condition: '"{{location_type}}" === "crime" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "tissue" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
 
         style:
@@ -64,7 +64,7 @@ place_types:
           opacity: 0.9
           fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "crime" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "tissue" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display others as icons when zoomed in
 
         icon:
@@ -72,7 +72,7 @@ place_types:
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "crime" && {{layer.focused}} === true'
+      - condition: '"{{location_type}}" === "tissue" && {{layer.focused}} === true'
         # Display others as icons when zoomed in
 
         icon:
@@ -99,7 +99,7 @@ place:
   show_list_button_label: _(List All Issues)
   show_map_button_label: _(Show the Map)
   action_text: _(added)
-  title: _(          We are undertaking a comprehensive planning process to ensure public safety in your community.Choose a location and identify the public safety issue                          )
+  title: _(          Identify/Propose solutions to Traffic and Transportation issues in your assigned Study Area. Choose your Study Area    )
   action_text: _(identified)
   anonymous_name: _(Someone)
   submit_button_label: _(Share)
@@ -107,39 +107,45 @@ place:
   location_item_name: location
 
   items:
-    - prompt: _(Specify Type of Crime:)
+    - prompt: _(You are Sharing a Plan on:)
       type: select
       options:
         - label: _(Choose)
           value: ''
-        - label: _((Property Crime(Burglary))
-          value: burg
-        - label: _((Property Crime(Theft))
-          value: thft
-        - label: _((Property Crime(Extortion))
-          value: extr
-        - label: _((Personal Crime(Assault))
-          value: aslt
-        - label: _((Personal Crime(Kidnap))
-          value: kidp
-        - label: _((Personal Crime(Rape))
-          value: rpe
-        - label: _((Personal Crime(Murder))
-          value: mdr
+        - label: _(Traffic and Transportation)
+          value: tissue
       name: location_type
       attrs:
         - key: required
       
-    - prompt: _(Questionnaire no:)
+
+    
+     
+
+    - prompt: _(Name:)
       type: text
-      name: qno
+      name: submitter_name
       sticky: true
       attrs:
         - key: placeholder
-          value: _(Enter serial no on Questionnaire)
+          value: _(Full Name)
         - key: size
           value: 30
-    
+    - prompt: _(Email:)
+      type: text
+      name: private-submitter_email
+      sticky: true
+      attrs:
+        - key: placeholder
+          value: _(Stay Informed!)
+        - key: size
+          value: 30
+    - prompt: _(Tell Us About it )
+      type: textarea
+      name: description
+      attrs:
+        - key: placeholder
+          value: _(Traffic and Transportation Issue Description)
     - prompt: _(Image)
       inputfile_label: _(Share an Image of the Location)
       type: file
@@ -187,20 +193,16 @@ support:
 
 pages:
     
-  - title: PlanShare Crime Map
+  - title: About PlanShareMap
     slug: about
     start_page: true
 
-  - title: _(Home)
+  - title: _(Blog)
     external: true
     url: http://planshare.ml
-    
-  - title: _(blog)
-    external: true
-    url: http://planshare.ml/blog
 
 
   
 notifications:
-  on_new_place: false
+  on_new_place: true
   submitter_email_field: private-submitter_email

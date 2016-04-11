@@ -81,8 +81,194 @@ place_types:
           iconSize: [32, 32]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
+          
+  thft:
+    label: _(Theft)
+    rules:
+      - condition: '"{{location_type}}" === "thft" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
 
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
 
+      - condition: '"{{location_type}}" === "thft" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "thft" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/safety.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+          
+  extr:
+    label: _(Extortion)
+    rules:
+      - condition: '"{{location_type}}" === "extr" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "extr" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "extr" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/safety.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+          
+  aslt:
+    label: _(Assault)
+    rules:
+      - condition: '"{{location_type}}" === "aslt" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "aslt" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "aslt" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/safety.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+          
+  kidp:
+    label: _(Kidnap)
+    rules:
+      - condition: '"{{location_type}}" === "kidp" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "kidp" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "kidp" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/safety.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+          
+          
+  rpe:
+    label: _(Rape)
+    rules:
+      - condition: '"{{location_type}}" === "rpe" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "rpe" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "rpe" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/safety.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+          
+  mdr:
+    label: _(Murder)
+    rules:
+      - condition: '"{{location_type}}" === "mdr" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "mdr" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "mdr" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/safety.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+          
 
   
 
@@ -129,6 +315,16 @@ place:
       name: location_type
       attrs:
         - key: required
+
+    - prompt: _(Name:)
+      type: text
+      name: submitter_name
+      sticky: true
+      attrs:
+        - key: placeholder
+          value: _(First Name)
+        - key: size
+          value: 30
       
     - prompt: _(Questionnaire no:)
       type: text

@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: PlanShareMap Demo
+  title: PlanShare Crime Map
   # Header name
   name: PlanShare
   # Meta description that will show up in Google search results
-  meta_description: _(PlanShareMap is a web app designed to gather constructive public input in a social and engaging framework that allows all stakeholders to communicate their plan ideas effectively.)
+  meta_description: _(PlanShare Crime Map is a web app designed to gather public input on crime hotspots)
   # Meta author that will show up in Google search results
   meta_author: Osewa Oluwadamilare Joshua
 
@@ -29,8 +29,8 @@ map:
 
   options:
     center:
-      lat: 6.451000
-      lng: 3.351257
+      lat: 3.898000
+      lng: 7.411000
     zoom: 14
     minZoom: 10
     maxZoom: 17
@@ -51,10 +51,10 @@ map:
 # The values map the place type to map icons (defined below).
 place_types:
  
-  eissue:
-    label: _(Public Safety Issue)
+  crime:
+    label: _(Crime Hotspots)
     rules:
-      - condition: '"{{location_type}}" === "eissue" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "crime" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
 
         style:
@@ -64,7 +64,7 @@ place_types:
           opacity: 0.9
           fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "eissue" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "crime" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display others as icons when zoomed in
 
         icon:
@@ -72,7 +72,7 @@ place_types:
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "eissue" && {{layer.focused}} === true'
+      - condition: '"{{location_type}}" === "crime" && {{layer.focused}} === true'
         # Display others as icons when zoomed in
 
         icon:
@@ -107,13 +107,13 @@ place:
   location_item_name: location
 
   items:
-    - prompt: _(You are Sharing a Plan on:)
+    - prompt: _(You are providing input on:)
       type: select
       options:
         - label: _(Choose)
           value: ''
-        - label: _(Environmental Safety)
-          value: eissue
+        - label: _(Crime Hotspots)
+          value: crime
       name: location_type
       attrs:
         - key: required

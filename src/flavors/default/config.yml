@@ -122,30 +122,15 @@ place:
     
      
 
-    - prompt: _(Name:)
+    - prompt: _(Questionnaire no:)
       type: text
-      name: submitter_name
+      name: qno
       sticky: true
       attrs:
         - key: placeholder
-          value: _(Full Name)
+          value: _(Enter serial no on Questionnaire)
         - key: size
           value: 30
-    - prompt: _(Email:)
-      type: text
-      name: private-submitter_email
-      sticky: true
-      attrs:
-        - key: placeholder
-          value: _(Stay Informed!)
-        - key: size
-          value: 30
-    - prompt: _(Tell Us About it )
-      type: textarea
-      name: description
-      attrs:
-        - key: placeholder
-          value: _(Public Safety Issue Description)
     - prompt: _(Image)
       inputfile_label: _(Share an Image of the Location)
       type: file
@@ -193,13 +178,17 @@ support:
 
 pages:
     
-  - title: About PlanShareMap
+  - title: PlanShare Crime Map
     slug: about
     start_page: true
 
-  - title: _(Blog)
+  - title: _(Home)
     external: true
     url: http://planshare.ml
+    
+  - title: _(blog)
+    external: true
+    url: http://planshare.ml/blog
 
 
   

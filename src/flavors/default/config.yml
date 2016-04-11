@@ -33,10 +33,10 @@ map:
       lng: 3.898000
     zoom: 14
     minZoom: 10
-    maxZoom: 17
+    maxZoom: 19
   layers:
-    - url: http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
-      attribution: '&copy; PlanShareMap Powered by OpenStreetMap'
+    - url: https://api.tiles.mapbox.com/v4/dreking6.kj150hj6/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHJla2luZzYiLCJhIjoiV0JVSmg3TSJ9.qhBElPBHygMS70U0B-Dd4Q
+      attribution: '&copy; PlanShareMap Powered by Mapbox'
     - url: /static/data/philadelphia.geojson
       type: json
       rules:

@@ -1,0 +1,431 @@
+/* =Base Styles
+-------------------------------------------------------------- */
+
+html {
+}
+body {
+  background:none repeat scroll 0% 0% #33363B;
+  
+}
+
+/* Buttons */
+.btn,
+.btn:visited,
+.btn:link {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0.325em 0.625em;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  background-color: #267299;
+  box-shadow: -0.05em 0.05em 0 rgba(0,0,0,0.1);
+  font-weight: 600;
+  border: 3px solid rgba(0,0,0,0.05);
+  border-radius: 0.7em;
+  
+}
+.btn:hover {
+  background : none repeat scroll 0% 0% #33363B;
+
+}
+.btn-primary,
+.btn-primary:visited,
+.btn-primary:link {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  text-transform: none;
+  background-color: #267299;
+  color: white;
+  
+  
+}
+.btn-primary:hover {
+  background : none repeat scroll 0% 0% #33363B;
+}
+.btn-secondary,
+.btn-secondary:visited,
+.btn-secondary:link {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  background:none repeat scroll 0% 0% #33363B;
+  color: rgba(255, 255, 255, 0.7);
+}
+.btn-secondary:hover {
+  background-color:  #267299;
+  color: #fff;
+}
+
+#sign-in-btn {
+  text-transform: none;
+}
+
+
+
+
+/* Typography */
+body {
+  line-height: 1.25;
+}
+body, select, input, textarea {
+  color: #555;
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.25em 0;
+}
+h1 {
+  font-size: 1.4em;
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+h2 {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
+}
+h3 {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;font-size: 1.75em;
+}
+h4 {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  padding: 0.75em 1em 0.875em;
+  color: #005098;
+  background-color: rgba(0, 74, 225, 0.2);
+  
+}
+h5 {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif
+  font-size: 1.25em;
+}
+h6 {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+p {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  color: rgba(12, 47, 77, 0.96);
+  padding: 0em 0em 0em;  
+  margin: 1em;
+  line-height:30px;
+}
+ul,
+ol,
+dl {
+  margin-bottom: 0.75em;
+}
+li {
+  padding-bottom: 0.75em;
+}
+nav ul,
+nav ol,
+.unstyled-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li,
+.unstyled-list li {
+  padding-bottom: 0;
+}
+strong {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-weight: 600;
+}
+hr {
+  margin: 1.5em 0;
+  border: 1px solid #eeeeee;
+  border-top-color: rgba(0,0,0,0.2);
+  border-bottom-color: rgba(255,255,255,0.75);
+  border-right: 0;
+  border-left: 0;
+}
+
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+  background-color: #666;
+  color: #ddd;
+  padding: 1em 0.5em;
+  box-shadow: inset 0 0.325em rgba(0,0,0,0.1);
+  text-align: center;
+}
+#colophon a {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: White
+}
+#colophon a:hover {
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* Powered By */
+#powered-by {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  display: inline;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+a.shareabouts-logo {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+a.shareabouts-logo:hover {
+  color: Blue;
+}
+#powered-by a.openplans-logo {
+  font-weight: bold;
+}
+#powered-by a.openplans-logo:hover {
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* =Header
+-------------------------------------------------------------- */
+
+#site-header {
+  color: White;
+  background:none repeat scroll 0% 0% #33363B;
+}
+#site-title {
+  color: #fff;
+  font-family: Georgia,Utopia,Palatino,'Palatino Linotype',Times,serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7em;
+  text-shadow: 2px -2px 2px rgba(0,0,0,0.5);
+  float: left;
+  margin: 0 0.5em 0 0;
+  padding: 0;
+}
+.has-pages #site-title {
+  padding-left: 1.25em;
+}
+#site-title a:link,
+#site-title a:visited {
+  display: block;
+  font-size: 2em;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #eee;
+}
+#site-title a:hover {
+  color: #fff;
+}
+
+
+
+
+
+/* Footer */
+  #colophon {
+    background:none repeat scroll 0% 0% #33363B;
+    font-size: 0.9em;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 14;
+    padding: 0.25em;
+    box-shadow: 0 -0.325em rgba(0,0,0,0.1);
+    height: 1.9em;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .activity-enabled #colophon {
+    right: 18em; /* width of #ticker */
+  }
+  #powered-by {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+/* =List View
+-------------------------------------------------------------- */
+
+.list-toggle-nav {
+  display: none;
+}
+
+#list-container {
+  display: none;
+  background: #fff;
+  position: absolute;
+  padding: 1.75em 1em;
+  top: 5em; /* height of #site-header (on large screens) */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 39;
+  overflow: auto;
+}
+.place-list,
+.place-list-header {
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+/* Search */
+.list-search-form input {
+  max-width: 25em;
+  float: left;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+/* Search & Sort */
+.list-sort-menu {
+  float: right;
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  padding: 1em 0 0;
+  color: #eee;
+  text-transform: none;
+}
+.list-sort-prompt {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-size: 0.75em;
+  color: #999;
+}
+.list-sort-menu a {
+  font-weight: bold;
+  font-size: 0.75em;
+  text-decoration: none;
+}
+.list-sort-menu a.is-selected {
+  color: #555;
+}
+
+/* Place List */
+.place-list {
+  clear: both;
+  padding: 1.25em 0 0;
+}
+.place-list > li {
+  margin: 0;
+  padding: 0.75em 0 1.25em 0;
+  border-top: 1px solid #eeeeee;
+}
+.place-list .place-header {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-size: 0.875em;
+}
+.place-list .place-header:before, .place-list .place-header:after { display: none; }
+.place-list .place-header:after { clear: none; }
+.place-list .place-header h1 {
+  font-size: 1.5em;
+}
+.place-list .place-submission-details {
+  float: left;
+  width: 17.25em;
+  margin-top: 0.5em;
+  padding-left: 3em;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.place-list .point-submitter .avatar {
+  width: 2.5em;
+  height: 2.5em;
+  float: left;
+  margin-left: -3em;
+}
+.place-list .place-items {
+  margin-right: 5em;
+  margin-left: 16em;
+}
+.place-list .place-item-attachment {
+  float: left;
+  max-width: 9em;
+  margin: 0 1em 0.75em 0;
+}
+
+.place-list .place-label,
+.place-list .place-value {
+}
+.place-list .place-label:empty,
+.place-list .place-value:empty {
+  display: none;
+}
+.place-item-attachment .place-value:empty {
+  display: block;
+}
+
+.view-on-map-btn {
+  margin: 1em 0;
+  float: left;
+}
+
+
+/* Forms */
+form {
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0 0 1.2em;
+}
+label {
+  font-family: 'Segoe UI',Segoe,'Trebuchet MS',Arial,sans-serif;
+  font-size: 1.00em;
+  text-transform: uppercase;
+  color: #999;
+  margin-right: 0.5em;
+  text-transform: none;
+  color: rgba(44, 72, 77, 1);
+}
+
+
+
+
+/* =The Ticker
+-------------------------------------------------------------- */
+
+#ticker {
+  background:none repeat scroll 0% 0% #33363B;
+}
+
+input.geocode-address-field {
+  width: 100%;
+  border-width: 0;
+  line-height: 1.25;
+  background-color: White;
+  color: Black;
+  padding-left: 2.125em;
+}

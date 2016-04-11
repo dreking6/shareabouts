@@ -1,14 +1,13 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Shareabouts
+  title: PlanShare Crime Map
   # Header name
-  name: Shareabouts
+  name: PlanShare Crime Map
   # Meta description that will show up in Google search results
-  meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: _(PlanShare is an interactive mapping tool to gather crowd sourced public input. An oppurtunity to help shape plans for your neighbourhood in a social, engaging process. The plan's success depends first on your input and ideas, and ultimately upon a committed group of local stakeholders dedicated to making the plan a reality.)
   # Meta author that will show up in Google search results
-  meta_author: OpenPlans.org
-
+  meta_author: Osewa Oluwadamilare Joshua
 
   # When the map loads, existing places will be loaded in chunks. By default,
   # the size of the chunks will be a reasonable default dictated by the API
@@ -16,7 +15,7 @@ app:
   # places_page_size: 100
 
   # Optional. List view is supported by default. Set to false to disable.
-  # list_enabled: false
+  # list_enabled: true
 
 # Settings for map and layer configs
 map:
@@ -29,14 +28,14 @@ map:
 
   options:
     center:
-      lat: 39.9523524
-      lng: -75.1636075
+      lat: 6.451000
+      lng: 3.351257
     zoom: 14
     minZoom: 10
     maxZoom: 17
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
-      attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>. Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">.'
+      attribution: '&copy; PlanShareMap Powered by OpenStreetMap'
     - url: /static/data/philadelphia.geojson
       type: json
       rules:
@@ -50,11 +49,11 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    label: _(Landmark)
+  crime:
+    label: _(Plan on Crime)
     rules:
-      - condition: '"{{location_type}}" === "landmark" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
+      - condition: '"{{location_type}}" === "crime" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display crimes as circles (vectors) when zoomed out
 
         style:
           color: '#0d85e9'
@@ -63,38 +62,68 @@ place_types:
           opacity: 0.9
           fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "landmark" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
+      - condition: '"{{location_type}}" === "crime" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display crimes as icons when zoomed in
 
         icon:
           iconUrl: /static/css/images/markers/dot-0d85e9.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "landmark" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
+      - condition: '"{{location_type}}" === "crime" && {{layer.focused}} === true'
+        # Display crimes as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/markers/bus.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconSize: [32, 32]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
-
-  park:
-    label: _(Park)
+    pthers:
+    label: _(Plan)
     rules:
-      - condition: '"{{location_type}}" === "park" && {{layer.focused}}'
-        # Show parks that are points as icons...
+      - condition: '"{{location_type}}" === "pthers" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
+        style:
+          color: '#e1264d'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "pthers" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-4bbd45.png
+          iconUrl: /static/css/images/markers/dot-e1264d.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "pthers" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/others.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconSize: [32, 32]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
 
-        # ...and parks that are polygons as shapes.
+  assault:
+    label: _(Assault)
+    rules:
+      - condition: '"{{location_type}}" === "assault" && {{layer.focused}}'
+        # Show housing that are points as icons...
+
+        icon:
+          iconUrl: /static/css/images/markers/house.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+        # ...and assault that are polygons as shapes.
 
         style:
           color: '#4bbd45'
@@ -102,15 +131,15 @@ place_types:
           opacity: 0.9
           fillOpacity: 0.7
 
-      - condition: '"{{location_type}}" === "park"'
-        # Show parks that are points as icons...
+      - condition: '"{{location_type}}" === "assault"'
+        # Show housings that are points as icons...
 
         icon:
           iconUrl: /static/css/images/markers/dot-4bbd45.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
-        # ...and parks that are polygons as shapes.
+        # ...and housing that are polygons as shapes.
 
         style:
           color: '#4bbd45'
@@ -118,39 +147,71 @@ place_types:
           opacity: 0.9
           fillOpacity: 0.4
 
-  school:
-    label: _(School)
+  waste:
+    label: _(Plan on Waste Management)
     rules:
-      - condition: '"{{location_type}}" === "school" && {{submission_sets.comments.length}} > 0'
-        # Display schools as circles
+      - condition: '"{{location_type}}" === "waste" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
 
         style:
-          color: '#f95016'
-          radius: 8
-          weight: 4
+          color: '#5359d7'
+          radius: 3
+          weight: 1
           opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#f95016'
-          radius: 16
-          weight: 4
-          opacity: 0.9
-          fillOpacity: 0.4
+          fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "school"'
+      - condition: '"{{location_type}}" === "waste" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-5359d7.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "waste" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/waste.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+  streets:
+    label: _(Plan on Streets/Parking)
+    rules:
+      - condition: '"{{location_type}}" === "streets" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        # Display others as circles (vectors) when zoomed out
+
         style:
-          color: '#f95016'
-          radius: 8
+          color: '#d849e0'
+          radius: 3
           weight: 1
           opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#f95016'
-          radius: 16
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
+          fillOpacity: 1
 
+      - condition: '"{{location_type}}" === "streets" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-d849e0.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "streets" && {{layer.focused}} === true'
+        # Display others as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/streets.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [32, 32]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+
+
+
+  
 
 activity:
   # Optional. Activity is supported by default. Set to false to disable.
@@ -160,69 +221,67 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add a Place)
+  add_button_label: _(Share a Plan)
   # Labels for the buttons that toggle the map and list views
-  show_list_button_label: _(List All Places)
+  show_list_button_label: _(List All Plans)
   show_map_button_label: _(Show the Map)
   action_text: _(added)
-  title: _(Tell us more...)
-  action_text: _(created)
+  title: _(          We are undertaking a comprehensive planning process to envision the future for your community. Share your knowledge! Tell us your great ideas on how we can improve your community                           )
+  action_text: _(suggested)
   anonymous_name: _(Someone)
-  submit_button_label: _(Submit)
+  submit_button_label: _(Share)
 
   location_item_name: location
 
   items:
-    - prompt: _(Your Name)
-      type: text
-      name: submitter_name
-      optional: true
-      sticky: true
-      attrs:
-        - key: placeholder
-          value: _(Name)
-        - key: size
-          value: 30
-    - prompt: _(Your Email)
-      type: text
-      name: private-submitter_email
-      optional: true
-      sticky: true
-      attrs:
-        - key: placeholder
-          value: _(Email address)
-        - key: size
-          value: 30
-    - prompt: _(Location Name)
-      type: text
-      name: name
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Location Name)
-        - key: size
-          value: 30
-    - prompt: _(Location Type)
+    - prompt: _(Type of Crime witnessed?)
       type: select
       options:
         - label: _(Choose One)
           value: ''
-        - label: _(Landmark)
-          value: landmark
-        - label: _(Park)
-          value: park
-        - label: _(School)
-          value: school
+        - label: _(Property Crime)
+          value: pcrime		
+        - label: _(Assault)
+          value: assault
+        - label: _(Others)
+          value: pthers
       name: location_type
       attrs:
         - key: required
-    - prompt: _(Description)
-      type: textarea
-      name: description
-      optional: true
+      
+
+    - prompt: _(Name:)
+      type: text
+      name: submitter_name
+      sticky: true
       attrs:
         - key: placeholder
-          value: _(Description...)
+          value: _(Full Name)
+        - key: size
+          value: 30
+    - prompt: _(Email:)
+      type: text
+      name: private-submitter_email
+      sticky: true
+      attrs:
+        - key: placeholder
+          value: _(Stay Informed!)
+        - key: size
+          value: 30
+    - prompt: _(Title:)
+      type: text
+      name: name
+      attrs:
+        - key: placeholder
+          value: _(Title of your Plan. e.g Provision of waste bins at Ajegunle)
+        - key: size
+          value: 30
+    - prompt: _(Tell Us About it )
+      type: textarea
+      name: description
+      attrs:
+        - key: placeholder
+          value: _(Description)
     - prompt: _(Image)
       inputfile_label: _(Add an Image)
       type: file
@@ -249,17 +308,17 @@ survey:
   form_link_text: _(Leave a Comment)
   submit_btn_text: _(Comment)
   items:
+    - prompt: _(Your Name)
+      type: text
+      name: submitter_name
+      sticky: true
     - prompt: _(Comment)
       label: _(Comment)
       type: textarea
       name: comment
       attrs:
         - key: required
-    - prompt: _(Your Name)
-      type: text
-      name: submitter_name
-      sticky: true
-
+        
 support:
   submission_type: support
   submit_btn_text: _(Support)
@@ -269,33 +328,20 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(About)
+    
+  - title: About PlanShare
     slug: about
-    name: overview
     start_page: true
 
-  - title: _(More...)
-    pages:
-      - title: _(Why Shareabouts?)
-        slug: why
-        url: /static/pages/why.html
+  - title: Team
+    slug: team
+ 
+  - title: _(Blog)
+    external: true
+    url: http://planshare.ml
 
-      - title: _(Features)
-        slug: features
-        url: /static/pages/features.html
 
-  - title: _(Links)
-    pages:
-      - title: _(Documentation)
-        external: true
-        url: https://github.com/openplans/shareabouts/tree/master/doc
-      - title: _(Issues)
-        external: true
-        url: https://github.com/openplans/shareabouts/issues
-      - title: _(GitHub)
-        external: true
-        url: https://github.com/openplans/shareabouts
-
+  
 notifications:
   on_new_place: true
   submitter_email_field: private-submitter_email

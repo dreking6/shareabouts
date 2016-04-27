@@ -35,7 +35,7 @@ map:
     minZoom: 10
     maxZoom: 18
   layers:
-    - url: http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+    - url: https://api.mapbox.com/styles/v1/dreking6/cinjbgabz01xfd5m33zun7ltj/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZHJla2luZzYiLCJhIjoiV0JVSmg3TSJ9.qhBElPBHygMS70U0B-Dd4Q
       attribution: '&copy; PlanShareMap Powered by Mapbox'
     - url: /static/data/philadelphia.geojson
       type: json

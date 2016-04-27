@@ -31,7 +31,7 @@ map:
     center:
       lat: 7.406000
       lng: 3.893000
-    zoom: 15
+    zoom: 16
     minZoom: 10
     maxZoom: 18
   layers:

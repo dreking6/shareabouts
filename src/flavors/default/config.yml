@@ -69,7 +69,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "burg" && {{layer.focused}} === true'
@@ -100,7 +100,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "thft" && {{layer.focused}} === true'
@@ -131,7 +131,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "extr" && {{layer.focused}} === true'
@@ -162,7 +162,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "aslt" && {{layer.focused}} === true'
@@ -193,7 +193,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "kidp" && {{layer.focused}} === true'
@@ -225,7 +225,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "rpe" && {{layer.focused}} === true'
@@ -256,7 +256,7 @@ place_types:
 
         icon:
           iconUrl: /static/css/images/markers/dot-e1264d.png
-          iconSize: [17, 18]
+          iconSize: [13, 14]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "mdr" && {{layer.focused}} === true'

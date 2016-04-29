@@ -59,7 +59,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1
@@ -90,7 +90,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1
@@ -121,7 +121,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1
@@ -152,7 +152,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1
@@ -183,7 +183,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1
@@ -215,7 +215,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1
@@ -246,7 +246,7 @@ place_types:
 
         style:
           color: '#e1264d'
-          radius: 3
+          radius: 2
           weight: 1
           opacity: 0.9
           fillOpacity: 1

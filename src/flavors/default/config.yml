@@ -52,7 +52,7 @@ map:
 place_types:
  
   burg:
-    label: _(Burglary)
+    label: _(Burglary Hotspot)
     rules:
       - condition: '"{{location_type}}" === "burg" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
@@ -83,7 +83,7 @@ place_types:
           iconAnchor: [12, 41]
           
   thft:
-    label: _(Theft)
+    label: _(Theft Hotspot)
     rules:
       - condition: '"{{location_type}}" === "thft" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
@@ -114,7 +114,7 @@ place_types:
           iconAnchor: [12, 41]
           
   extr:
-    label: _(Extortion)
+    label: _(Extortion Hotspot)
     rules:
       - condition: '"{{location_type}}" === "extr" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
@@ -145,7 +145,7 @@ place_types:
           iconAnchor: [12, 41]
           
   aslt:
-    label: _(Assault)
+    label: _(Assaul Hotspot)
     rules:
       - condition: '"{{location_type}}" === "aslt" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
@@ -176,7 +176,7 @@ place_types:
           iconAnchor: [12, 41]
           
   kidp:
-    label: _(Kidnap)
+    label: _(Kidnap Hotspot)
     rules:
       - condition: '"{{location_type}}" === "kidp" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
@@ -208,7 +208,7 @@ place_types:
           
           
   rpe:
-    label: _(Rape)
+    label: _(Rape Hotspot)
     rules:
       - condition: '"{{location_type}}" === "rpe" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
@@ -239,7 +239,7 @@ place_types:
           iconAnchor: [12, 41]
           
   mdr:
-    label: _(Murder)
+    label: _(Murder Hotspot)
     rules:
       - condition: '"{{location_type}}" === "mdr" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         # Display others as circles (vectors) when zoomed out
